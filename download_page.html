@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta name="viewport" content="width=device-width", initial-scale= 1 />
+    <title>download Page</title>
+    <style>
+         *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        header{
+            background: #ffdc55;
+            padding: 0.5rem;
+            min-height: 10rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-around
+  
+        }
+        header h2 {
+            font-family: fantasy;
+            font-weight: 800;
+            font-size: 4vw;
+            text-transform: uppercase;
+        }
+        header ul{
+        
+           
+            padding: 0.6rem;
+        list-style-type: none;
+           line-height: 2.1;
+            text-transform: uppercase;
+        }
+        header ul li{
+       
+          text-align: center;
+        background: white;
+        margin-block-start: 15px;
+        }
+        header li a{
+   color: blue;
+   display: block;
+            font-family: fantasy;
+          text-align: center;
+          font-size: 2.4vw;
+            text-transform: uppercase;
+            padding: 5px;
+            text-decoration: none
+            
+        }
+        header li a:hover{
+        background: blue;
+        color: white;
+        
+           
+            text-transform: uppercase;
+          
+            text-decoration: none
+            
+        }
+        main{
+            background: #d6bb8f;
+            padding:10px
+           
+        }
+        .genre{
+            background: none;
+            border-radius: 50px;
+          
+          
+            padding: 0.9rem;
+            text-align: center
+        }
+        .genre h1{
+            font-family: cursive;
+            text-transform: uppercase;
+            font-weight: 900;
+            color: white
+        }
+        .genre ul li{
+            display: inline;
+            padding: 5px;
+            
+            margin: 0.6rem;
+            text-transform: uppercase;
+            background: yellow;
+            line-height: 3.5
+        }
+     
+        .search{
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            align-items: center;
+           
+          
+        }
+        .search button{
+          border-radius: 5px;
+            background: green;
+           outline: none;
+           margin-block-start: 10px;
+            padding: 12px;
+            font-size: 1vw;
+            text-align: center
+        }
+        .search > input{
+         
+            border-radius: 10px;
+            outline: none;
+            border: none;
+            text-align: center;
+            padding: 1.3rem
+        }
+        footer{
+            background: grey;
+            padding: 1rem;
+            font-size: 1.4vw;
+            font-style: arial
+        }
+        footer > figure{
+    text-align: center;
+    float: right;
+    margin-inline: 40px
+    
+        }
+        footer figure img{
+      width: 25rem;
+        height: 60%
+    
+   
+ 
+        }
+        footer figure figcaption{
+            background: white;
+            color: blue;
+          
+        }
+         footer article{
+        color: white;
+        line-height: 1.6;
+        font-size: 1vw;
+        text-transd
+    
+        }
+        
+        
+        .latest{
+            display: i
+        }
+        
+        .latest figure{
+            margin: 3rem;
+           display: flex;
+           background: #dfd5ff;
+           border-radius: 50px;
+           padding: 1.4rem;
+           justify-content: space-around;
+           align-items: center;
+      
+        }
+        .latest figure img{
+            width: 50vw;
+            height: 27rem
+        }
+        .display figure figcaption{
+           
+            color: blue;
+            font-size: 3vw;
+            font-weight: 800;
+            text-shadow: 3px 4px 3px #f8ff55;
+           
+        }
+        figure figcaption > a{
+            display: block;
+         
+            font-size: 1.6vw;
+            padding: 0.8rem;
+            text-align: center;
+            text-transform: uppercase;
+            
+        }
+        figure figcaption details > p > i{
+         line-height: 2.1;
+            font-size: 1.2vw;
+            text-align: center;
+            text-transform: capitalize;
+        }
+        figure figcaption i > span{
+            color: blue;
+         background: yellow;
+            font-size: 1vw;
+            padding: 0.3rem;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .pagination{
+            display: inline-block;
+            color: White;
+            text-align: center;
+       
+            padding: 0px;
+          
+            list-style-type: none;
+            
+        }
+        .pagination li{
+            display: inline;            
+        }
+        .pagination a{
+            color: black;
+            font-size: 1vw;
+            font-family: monospace;
+           border-right: 3px solid red; 
+          float: left;
+         text-decoration: none;
+            padding: 1.6rem;
+            text-transform: capitalize
+         
+            }
+       .pagination a:hover{
+         background: #0076ff;
+         color: white;
+          text-decoration: none
+        }
+        .active{
+            background: #0076ff
+        }
+        
+        .container{
+            width: 100%;
+           margin-top: 20px;
+            display: block;
+            text-align: center;
+            background: #f4f13d
+        }
+        mark{
+            margin-left: 69px;
+            padding: 0.9rem;
+            font-size: 1.2vw;
+            text-align: center;
+            text-transform: capitalize;
+            background: White;
+            color: #f451d3
+        }
+        #menu{
+            background: #d6bb8f;
+            padding: 0.7rem
+        }
+        .display{
+            
+            padding: 0.6rem;
+            color: white;
+            margin: 0 auto;
+            font-size: 1vw;
+            width: 70%;
+            text-transform: capitalize
+        }
+        .display section{
+           display: flex;
+            font-size: 2vw;
+            margin: 0.9rem;
+            justify-content: space-between;
+            
+        }
+        .display i{
+          display: block;
+        background: white;
+        width: fit-content;
+            padding: 3px;
+           
+            font-size: 1.2vw;
+            color: blue;
+    
+        }
+        .indent{
+            text-indent: 1cm;
+            line-height: 1.6
+        }
+       .ink{
+           background: white;
+           padding: 0.8rem;
+           text-align: center
+       }
+       .subtitles{
+         
+           list-style-position: inside;
+          
+       }
+       .subtitles ul{
+          padding: 0.9rem;
+           list-style-position: inside;
+           line-height: 2.1;
+          margin: 15px;
+          border-radius: 30px;
+           background: #dcdcdcfa
+       }
+       h3{
+           text-decoration: underline;
+           text-transform: capitalize
+       }
+    </style>
+</head>
+<body>
+      <header><h2>macro movies</h2>
+    <ul><li><a href="cinema.html">home</a></li><li><a href="">latest movies</a><li><a href="">subtitles</a></li><li><a href="">news on movies</a>
+    </li></ul>
+    </header>
+    <div id="menu">
+        <div class="search">
+       <input placeholder="search for latest movies" type="search"/>
+       <button><i></i>search</button></div><br><br>
+        <div class="genre">
+        <h1>movies by genre</h1><br>
+        <ul>
+            <li><a href="">action</a></li>
+            <li><a href="">adventure</a></li>
+            <li><a href="">comedy</a></li>
+            <li><a href="">fiction</a></li>
+            <li><a href="">fantasy</a></li>
+            <li><a href="">biography</a></li>
+            <li><a href="">crime</a></li>
+            <li><a href="">romance</a></li>
+        </ul>
+    </div></div>
+    <hr color="white" style="height: 7px; ">
+    <main>
+    <div class="display">
+        
+    <figure align="center">
+        <figcaption>scream vi</figcaption>
+        <img src="images.jpg" alt="movie pics" height="400px" width="200vw">
+        </figure>
+        <br>
+        <p><i>plot: </i>
+        <p class="indent">Four survivors of the Ghostface murders leave Woodsboro behind for a fresh start in New York City. However, they soon find themselves in a fight for their lives when a new killer embarks on a bloody rampage.
+</p><br>
+<i>actors:</i><span>   jenna ortega, Melissa barrera, jack champion, samara weaving,  </span></p>
+        <section>
+            <div><i>release date</i><p>10 march 2023</p></div>
+            <div><i>movie series</i><p>scream</p></div>
+           
+            <div><i>runtime</i><p>126min</p></div>
+                    </section>
+                    
+                    </div> <hr color="white" style="height: 7px; ">
+                    <div><br>
+                        <h3 align="center">to Watch Online</h3>
+                    <video  style="margin: 0 auto;display: block; width: 50vw" controls> 
+                        <source src="/storage/emulated/0/Download/Love_at_First_Kiss_(2023)_WEBRip_high_(fzmovies.net)_4b68f7261864a5d309763cd3b71a9fde.mp4" type="video/mp4"></source>
+                      
+                    </video><br>
+                    <p class="ink">
+                        to download the movie, click this button <a href="/storage/emulated/0/Download/Love_at_First_Kiss_(2023)_WEBRip_high_(fzmovies.net)_4b68f7261864a5d309763cd3b71a9fde.mp4" download>link here</a>
+                    </p><br><br><br>
+                    <article class="subtitles">
+                      <h3>for subtitles:</h3>
+                        <ul>
+                        <li>English <br><a href="/storage/emulated/0/Download/Love.At.First.Kiss.English-WWW.MY-SUBS.CO.srt" download>download english subtitles</a></li>
+                        <li>Russia <br><a href="">download Russia subtitles</a></li>
+                        <li>Chinese <br> <a href="">download Chinese subtitles</a></li>
+                        <li>Indonesia <br> <a href="">download Indonesia subtitles</a></li>
+                        <li>Hindi <br> <a href="">download hindi subtitles</a></li>
+                        <li>Japanese <br><a href="">download Japanese subtitles</a></li>
+                        </ul>
+                    </article>
+ 
+                        
+  </div>
+    </div>
+    </main>
+</body>
+</html>

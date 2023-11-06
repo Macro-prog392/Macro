@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Macro movie</title>
+    <link rel="stylesheet" href="<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        header{
+            background: #ffdc55;
+            padding: 20px;
+            min-height: 30%;
+      
+  
+        }
+        header h2 {
+            font-family: fantasy;
+            font-weight: 800;
+            margin-block-end: 25px;
+            font-size: 4.5vw;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        header span {
+          display: flex;
+      white-space: nowrap;
+      justify-content: space-between;
+   }
+        header span a{
+        background: white;
+           
+            font-family: fantasy;
+            box-shadow: 2px 1px 3px aqua;
+            font-size: 2vw;
+            
+            text-transform: uppercase;
+            padding: 7px;
+            text-decoration: none
+            
+        }
+        header span a:hover{
+        background: blue;
+        box-shadow: none;
+        color: white;
+        }
+        main{
+            background: #d6bb8f;
+           
+        }
+        .genre{
+            background: none;
+            border-radius: 50px;
+            padding: 0.9rem;
+            text-align: center
+        }
+        .genre h1{
+            font-family: cursive;
+            text-transform: uppercase;
+            font-weight: 900;
+            color: white;
+            font-size: 20px;
+        }
+        .genre ul li{
+            display: inline;
+            padding: 0.7rem;
+            font-size: 2.5vw;
+            margin: 0.6rem;
+            text-transform: uppercase;
+            background: yellow;
+            line-height: 5.7
+        }
+        .search button{
+            border-radius: 5px;
+            margin-block-start: 10px;
+            background: green;text-align: center;
+            outline: none;
+            color: white;
+            font-weight: 709;
+            padding: 10px;
+            font-size: 2.7vw;
+       
+            
+        }
+        .search{
+            display: flex;
+            flex-direction: column;
+            Justify-content: center;
+            align-items: center;
+           
+       
+            
+           
+          
+        }
+        .search > input{
+    
+            border-radius: 10px;
+       
+            outline: none;
+            border: none;
+            text-align: center;
+            padding: 12px
+        }
+        footer{
+            background: grey;
+            padding: 1rem;
+            font-size: 2rem;
+            font-style: arial
+        }
+        footer > figure{
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    width: 50%
+    
+        }
+        footer figure img{
+        display: block;
+  width: 100%;
+        height: 60%
+    
+   
+ 
+        }
+        footer figure figcaption{
+            background: white;
+            color: blue;
+            font-size: 2.5vw;
+            font-style: monospace;
+            
+          
+        }
+         footer article{
+        color: white;
+        line-height: 1.6;
+        font-size: 1vw;
+        text-transd
+    
+        }
+        
+        
+        .latest{
+       
+        }
+        
+        .latest figure{
+            margin: 3vw;
+           display: flex;
+           background: #dfd5ff;
+           border-radius: 20px;
+           padding: 10px;
+           justify-content: space-evenly;
+           height: auto;
+          
+           align-items: center;
+      
+        }
+        .latest figure img{
+            width: 30%;
+            height: auto;
+            box-shadow: 7px 5px 6px chocolate
+        }
+        .latest figure figcaption{
+        width: 60%;
+        overflow: hidden
+     
+        
+           
+        }
+        .latest details{
+       
+        }
+        details {
+          text-transform: capitalize;
+          color: blue;
+        }
+        article p:first-child{
+         background: red;
+        }
+        figure figcaption > a{
+            display: block;
+         line-height: 2.3;
+      
+            font-size: 4vw;
+            font-weight: 700;
+            padding: 7px;
+            color: blue;
+            text-align: center;
+            text-transform: uppercase;
+            
+        }
+        figure figcaption article {
+         line-height: 2.5;
+            font-size: 1.7vw;
+            font-family: Monospace;
+         height: 100%;
+         overflow: hidden;
+            text-transform: capitalize;
+        }
+        figure figcaption article > span{
+            color: blue;
+         background: yellow;
+            font-size: 2vw;
+            padding: 1px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .pagination{
+   white-space: nowrap;
+       width: 100%;
+        text-align: center;
+          background: #f4f13d;
+            list-style-type: none;
+            
+        }
+        .pagination li{
+            display: inline-block;
+            padding: 0px;
+            margin: 0px;
+       
+        
+        }
+        .pagination a{
+            color: black;
+            font-size: 3vw;
+            font-family: monospace;
+           border-right: 1px solid red; 
+          
+           display: block;
+           padding: 10px;
+         
+           text-align: center;
+         text-decoration: none;
+       
+            text-transform: capitalize
+         
+            }
+       .pagination a:hover{
+         background: #0076ff;
+         color: white;
+          text-decoration: none
+        }
+        .active{
+            background: #0076ff
+        }
+        
+        .container{
+      
+ 
+        }
+        mark{
+          line-height: 10;
+            margin-left: 69px;
+            padding: 0.9rem;
+            font-size: 1.3vw;
+            text-align: center;
+            text-transform: capitalize;
+            background: White;
+            color: #f451d3
+        }
+    </style>
+</head>
+<body>
+    <header><h2>Macro Movies </h2>
+    <span><a href="home intro.html">home</a><a href="">latest movies</a><a href="">subtitles</a><a href="">news on movies</a>
+    </span>
+    </header>
+    <main><br>
+        <div class="search">
+        <input placeholder="search for latest movies" type="search">
+        <button><i></i>search</button></div><br><br>
+        <div class="genre">
+        <h1>movies by genre</h1><br>
+        <ul>
+            <li><a href="">action</a></li>
+            <li><a href="">adventure</a></li>
+            <li><a href="">comedy</a></li>
+            <li><a href="">fiction</a></li>
+            <li><a href="">fantasy</a></li>
+            <li><a href="">biography</a></li>
+            <li><a href="">crime</a></li>
+            <li><a href="">romance</a></li>
+        </ul>
+    </div>
+    <hr color="white" style="height: 7px; ">
+    <mark> 2023 latest action movies</mark>
+    <div class="container">
+ <ul class="pagination">
+     
+     <li><a href="">previous</a></li>
+ <li><a href="" class="active">1</a></li>
+ <li><a href="">2</a></li>
+<li><a href="">3</a></li>
+<li><a href="">4</a></li>
+<li><a href="">5</a></li>
+<li><a href="">6</a></li> 
+<li><a href="">next</a></li>
+</ul>  </div>
+ <section class="latest">
+        
+        <figure><img src="download-2 (1).webp" alt=""><figcaption><a href="">Glass onions: knives out</a>
+        
+            <article><span>plots: </span>a
+            billionaire invite his friends to his island only to witness a twist
+            of motives and death
+ 
+        </article></figcaption></figure>
+        <figure><img src="download-1.webp" alt="ranger"><figcaption><a href="">spider Man: across the spider verse</a>
+            <article><span>plots: </span><br>After reuniting with Gwen Stacy,
+            Brooklyn's full-time, friendly neighborhood Spider-Man is catapulted
+            across the Multiverse, where he encounters a team of Spider-People
+            charged with protecting its very existence. However, when the heroes
+            clash on how to handle a new threat, Miles finds himself pitted
+            against the other</article></figcaption></figure>
+           <figure><img src="images-1.jpg" alt=""><figcaption><a href="">ant-man and the wasp: into the quantumania</a>
+        
+            <article><span>plots: </span><br>Ant-Man and the Wasp find themselves exploring the Quantum Realm, interacting with strange new creatures and embarking on an adventure that pushes them beyond the limits of what they thought was possible.<br>
+               
+        </article></figcaption></figure>
+        <figure><img src="images-4.jpg" alt="ranger"><figcaption><a
+        href="">Megan</a>
+            <article><span>plots: </span><br>M3GAN is a marvel of artificial
+            intelligence, a lifelike doll that's programmed to be a child's
+            greatest companion and a parent's greatest ally. Designed by Gemma,
+            a brilliant roboticist, M3GAN can listen, watch and learn as it
+            plays the role of friend and teacher, playmate and protector. When
+            Gemma becomes the unexpected caretaker of her 8-year-old niece, she
+            decides to give the girl an M3GAN prototype, a decision that leads
+            to unimaginable consequences.</article></figcaption></figure>
+             <figure><img src="images-3.jpg" alt=""><figcaption><a href="">dragon & dungeon: honor among thieves</a>
+        
+            <article><span>plots: </span><br>A charming thief and a band of
+            unlikely adventurers embark on an epic quest to retrieve a long lost
+            relic, but their charming adventure goes dangerously awry when they
+            run afoul of the wrong people.</article></figcaption></figure>
+        <figure><img src="images.jpg" alt="ranger"><figcaption><a href="download_page.html">scream vi</a>
+        
+        <article>
+            <span>plot</span><br>
+Four Survivors Of The Ghostface Murders Leave Woodsboro Behind For A Fresh Start In New York City. However, They Soon Find Themselves In A Fight For Their Lives When A New Killer Embarks On A Bloody Rampage.
+
+        </article></figcaption></figure>
+        <div class="container">
+         <ul class="pagination">
+     
+     <li><a href="">previous</a></li>
+ <li><a href="" class="active">1</a></li>
+ <li><a href="">2</a></li>
+<li><a href="">3</a></li>
+<li><a href="">4</a></li>
+<li><a href="">5</a></li>
+<li><a href="">6</a></li> 
+<li><a href="">next</a></li>
+</ul> </div>     
+    </section></main>
+    <footer>
+    
+        <figure>
+   
+     <img src="FB_IMG_16888893684416915.jpg" alt="author pics">
+      <figcaption> <p style="background: brown;font-size: 2rem; color: White;
+      font-weight: 900;">Author</p><i>Macro</i></figcaption>
+</figure>
+<article>
+    <p>my love for web designing guide me to create my own personal blog
+    my blog contain latest movies, video clip, comedy, music and news</p><br>
+    <p><i class="fab fa-google"></i> Email address:  <a href="mailto: macriweb@gmail.com">click here</a></p>
+    <p><i class="fab fa-whatsapp"></i>  WhatsApp No: <a href="tel: 09017749352"> click here</a></p>
+    <p><i class="fab fa-instagram"></i> Instagram account: <a href="">click here to follow </a></p></article>
+</footer>
+</body>
+</html>

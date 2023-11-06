@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <meta charset="UTF-8">
+  
+   <link rel="stylesheet" href="<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <title>log in </title>
+ 
+   <style>
+   *{
+     padding: 0px;
+     box-sizing: border-box;
+     margin: 0px;
+   }
+     body{
+       background-image: url('istockphoto-175421947-612x612.jpg');
+       background-size: cover;
+       background-repeat: no-repeat;
+       position: relative;
+     }
+          nav{
+        display: none;
+            position: absolute;
+            height: 100%;
+            width: 30%;
+            top: 0px;
+     
+      object-fit: cover;
+            background: aqua;
+            z-index: 1;
+           padding-block-end: 20px;
+            transition-duration: 3s;
+            list-style-type: none
+      
+           
+    
+        }
+        nav ul li{
+           line-height: 2.9;
+           list-style-type: none
+            
+        }
+        nav i{
+        	
+        	float: right;
+        }
+        nav a{
+	font-size: 4vw;
+        }
+        nav ul li a{
+            display: block;
+      
+            text-align: center;
+            text-decoration: none;
+            text-transform: capitalize
+        }
+        .form span{
+        font-size: 3vw;
+       
+          white-space: nowrap;
+          height: 1300px;
+       border-bottom: 1px solid white;
+          padding: 10px;
+        }
+        span input{
+          border: none;
+color: black;
+    outline: none;
+  width: 80%;
+  background: none;
+    margin-inline-start: 10px;
+    font-size: 3vw;
+        }
+        span i, span input::placeholder{
+         text-transform: capitalize;
+       color: black 
+       
+       
+       
+        }
+  
+  
+   
+   
+    
+        }
+        span i{
+          color: black;
+         
+        }
+        nav button{
+	padding: 4px;
+	float: right;
+	color: blue;
+	font-size: 1.3vw;
+	border: 0px solid blue;
+
+	
+	text-transform: uppercase;
+        }
+        nav a:hover{
+        	background: yellow;
+        }
+        nav:target{
+            display: block;
+          
+        }
+        
+        .form{
+          background: #c7d0cfe6;
+        
+          margin: 6% auto;
+        
+
+          padding: 20px;
+          display: block;
+          border-radius: 15px;
+         width: 60%;
+       
+        }
+        input[type="submit"]{
+          text-align: center;
+          display: block;
+          margin: 0 auto;
+          font-size: 4vw;
+        }
+        p{
+          color: white;
+          font-weight: 500;
+          font-size: 3vw;
+        }
+        div p{
+          text-transform: capitalize;
+          color: white;
+     
+       
+        ;
+          
+          
+          
+        }
+        form{
+          padding-inline-start: 1vw
+        }
+        div label{
+          line-height: 3.1;
+    display: block;
+       font-size: 2.5vw;
+          text-transform: capitalize;
+          color: #7267bf;
+          font-weight: 500;
+        }
+       
+        
+        h2{
+          text-transform: capitalize;
+          font-size: 3.6vw;
+          
+          color: blue;
+          text-align: center;
+        }
+        button{
+          padding: 3px;
+          text-transform: capitalize;
+          color: blue;
+          font-size: 1.2vw;
+        }
+        .menu-bar{
+         
+          padding-inline-start: 10px;
+        }
+        header h1{
+          display: inline-block;
+        
+          text-transform: uppercase;
+        
+          font-size: 5.6vw;
+          color: yellow;
+          text-shadow: 1px 2px 2px blue
+        }
+   </style>
+ </head>
+ <body>
+        
+    <nav id="navigation">
+     <button><a href="#" id="menu" align="center"><i class="fa
+     fa-times"></i></a></button>
+     
+      <br><br>
+        <ul><li><a href="Macro bookstore.html">home</a></li><li><a
+        href="">category</a></li><li><a href="">latest</a></li><li><a
+        href="Registration.html">join membership</a></li><li><a href="">contact</a></li><li><a
+        href="">about</a></li><li><a href="">sign in</a></li></ul>
+      
+    </nav>
+    
+      <header>
+     
+          <a href="#navigation" class="menu-bar"><i class="fas fa-bars"
+          style="font-size: 7vw; color: blue; margin-inline: 5px;"></i></a>
+          <h1>reader access</h1>
+     </header>
+    <main>
+    
+      <div class="form">
+     
+        <h2>login page</h2>
+        <form>
+          
+          <label>username: <span><i class="fa-solid fa-user"></i><input type="text" placeholder="username"></span>
+        </label>
+          <label>email address: <span><i class="fa fa-envelope"></i><input
+          type="email" placeholder="email address"/></span></label>
+          <label>password <span><i class="fa fa-lock"></i><input type="password"
+          placeholder="enter accurate password"></span></label>
+          <br><input type="submit">
+          
+          
+          
+          
+          
+        </form><br>
+        <br>
+     
+        <p>already have an account <a href=""><button>log in</button></a>
+   </p><br><p><a href="">forget password</a></p></div>
+     <br> 
+      
+    </main>
+ </body>
+</html>

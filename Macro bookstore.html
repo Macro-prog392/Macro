@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bookstore</title>
+      <link rel="stylesheet" href="<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <style>
+        *{
+            margin: 0px;
+            box-sizing: border-box;
+            padding: 0px
+        }
+        body{
+   
+           /* background: linear-gradient(190deg, #746576 10%, white 90%);*/
+           background: #fbfafae5
+          
+        }
+        main{
+        padding: 10px
+        }
+        section{
+          display: flex;
+    background: rgba(239,240,240,0.641);
+         padding: 17px;
+       border: 1.3px solid blue;  
+         margin: 0 auto;
+         border-radius: 7px;
+     align-items: center;
+     
+         margin-block-end: 30px;
+    
+          overflow-x: scroll;
+        }
+        section > div{
+          margin-inline-start: 0px;
+          margin-inline-end: 50px;
+      
+         
+         
+        }
+        h3{
+          color: white;
+          text-transform: uppercase;
+         font-size: 2vw;
+         width: fit-content;
+         text-align: center;
+         background: blue;
+         margin: 20px auto;
+         padding: 5px
+         
+       
+        
+        }
+       section > div > figure{
+         background: white;
+         border-radius: 10px;
+         box-shadow: 4px 2px 1px silver;
+          height: auto;
+          width: auto;
+          padding: 10px
+        }
+    
+     figure img{
+    display: block;
+ max-width: 250px;
+  height: auto;
+  margin: 0 auto;
+
+     }
+     
+     
+     figcaption{
+	padding: 5px;
+	display: flex;
+
+	text-transform: capitalize;
+	justify-content: space-between;
+	white-space: nowrap;
+     }
+     figcaption button{
+   padding: 6px;
+   margin: 10px;
+   font-weight: 600;
+   border: none;
+   outline: none;
+   color: blue;
+   font-size: 2.7vw;
+   background: none;
+   
+   text-transform: capitalize;
+     }
+     button,a{
+     cursor: pointer
+     }
+     
+     section > div > div{
+         visibility: hidden;
+      font-size: 1.7vw;
+     left: 30px;
+     right: 30px;
+   
+     top: 50vw;
+
+       background: #c5b9c7bd;
+    position: fixed;
+    
+
+     }
+    
+     div >div h3{
+       text-transform: uppercase;
+       color: white;
+       text-align: center;
+       background: none;
+       padding-block-end: 10px;
+       text-decoration: underline;
+     }
+     div > div  p{
+       text-transform: uppercase;
+       font-size: 2.2vw;
+       color: black;
+       font-family: Comic Sans MS;
+     }
+     div > div img{
+       display: none;
+      margin: 0 auto;
+       height: 30vw;
+       width: 29%;
+   
+     }
+     section > div > div > article > p:nth-child(5){
+       font-size: 4vw;
+       color: red;
+      text-align: center;
+      white-space: nowrap;
+       font-family: fantasy;
+     }
+     section > div > div > article > p:nth-child(2){
+       color: white;
+       font-stretch: ultra-expanded;
+       font-size: 4vw;
+       text-align: center;
+       white-space: nowrap;
+       font-family: serif;
+       text-shadow: 1px 2px 3px red;
+     }
+     section > div  figure:hover ~ div{
+      
+       visibility: visible
+     
+     }
+     div > div > article{
+       padding: 15px;
+     }
+  div > div > a{
+   float: right;
+   display: none;
+    justify-content: flex-end;
+    text-decoration: none;
+    color: blue;
+    
+  }
+   a:hover button {
+    background: yellow;
+    
+  }
+  div > div a:focus div > div{
+  visibility: none
+  }
+  a:hover i{
+    background: white;
+    color: blue;
+  }
+  
+     div > div > a i{
+       background: black;
+font-size: 10vw;
+       padding: 5px;
+       color: white;
+       text-align: center;
+       font-weight: 800;
+       border-radius: 0px 0px 0px 15px;
+     }
+   header{
+     background: #3562cd;
+           top: 0px;
+           bottom: 90px;
+            font-size: 5vw;
+          
+            text-transform: uppercase;
+            color: yellow
+        }
+  
+       }
+       figcaption p{
+	line-height: 3.1;
+	font-family: Courier New;
+	text-transform: uppercase;
+	font-size: 1vw;
+	font-weight: 800;
+	color: white;
+	text-shadow: 1px 2px 1px red;
+       }
+        header h1{
+           font-size: 5vw;
+           white-space: nowrap;
+        padding-block-start: 10px;
+        padding-block-end: 20px;
+           text-align: center;
+          letter-spacing: 7px;
+            font-family: Courier
+        }
+        nav{
+        display: none;
+            position: fixed;
+            width: 40%;
+            top: 0px;
+      height: 100%;
+            background: gray;
+            z-index: 1;
+            overflow: scroll;
+          
+            transition-duration: 0.1s;
+            list-style-type: none
+      
+           
+    
+        }
+        details{
+        color: blue;
+        }
+        nav ul li{
+           line-height: 3.9;
+           list-style-type: none
+            
+        }
+        nav i{
+        ;
+        }
+        nav a{
+	
+        }
+        nav ul li a,details{
+            display: block;
+           color: white;
+           font-size: 4vw;
+            text-align: center;
+            text-decoration: none;
+            text-transform: capitalize
+        }
+        
+        nav details li a{
+        color: blue;
+        }
+        
+        nav button{
+	padding: 6px;
+	color: blue;
+	right: 0px;
+	border: none;
+	outline: none;
+	background: yellow;
+	font-size: 3.4vw;
+	margin-left: 0px;
+	
+	text-transform: uppercase;
+        }
+        nav a:hover{
+        	background: white;
+        	color: green;
+        }
+        nav:target{
+            display: block;
+          
+        }
+      
+        .fas fa-bars{
+            font-size: 5vw;
+     
+        }
+        .fa-solid fa-times{
+          font-size: 70px;
+          color: blue;
+        }
+       
+        header ul{
+          text-transform: capitalize;
+          font-size: 3vw;
+          display: block;
+      
+          column-count: 3;
+          column-rule: 1px solid blue;
+     
+        
+        
+          
+       
+        }
+       header ul li{
+        list-style-type: none;
+        text-align: center;
+        line-height: 2.1;
+        }
+    header ul li a{
+       font-weight: 500;
+       
+        text-transform: uppercase;
+        color: white;
+        font-size: 2vw;
+     
+          text-decoration: none;
+        }
+       header li a:hover,header li a:focus{
+          color: blue;
+          padding: 12px;
+        
+        }
+        header img{
+          width: 10%;
+          height: 4vh;
+        }
+      .search{
+      display: flex;
+      background: yellow;
+      align-items: center;
+      padding: 8px;
+      Justify-content: space-evenly
+      }
+             .search button{
+          margin-inline-start: 15px;
+          border-radius: 5px;
+           
+            background: green;text-align: center;
+            outline: none;
+            color: white;
+            font-weight: 709;
+            padding: 10px;
+            font-size: 2vw;
+       
+            
+        }
+        .search span{
+            display: flex;
+            flex-direction: row;
+            Justify-content: center;
+            align-items: center;
+           
+       
+            
+           
+          
+        }
+        .search input{
+    flex-grow: 5;
+            border-radius: 10px;
+       
+            outline: none;
+            border: none;
+            text-align: center;
+            padding: 12px
+        }
+        
+        .about{
+         color: white;
+          padding: 10px;
+        font-size: 2vw;
+          line-height: 1.5
+        }
+        dt{
+          text-transform: capitalize;
+          font-size: 4vw;
+         color: black;
+          font-weight: 600;
+          
+        }
+        dd{
+          color: white;
+          text-indent: 40px;
+        }
+        /* .top{
+            background: purple;
+            grid-row-start: 1;
+            grid-row-end: 6;
+            grid-column-start: 8;
+            grid-column-end: 10;
+          
+         
+        }*/
+        #class{
+ margin-block-end: 30px;
+ display: flex;
+ overflow: scroll;
+ border-radius:10px;
+ border: 2px solid blue;
+ background: white;
+            padding: 20px;
+           
+        }
+        h2{
+text-shadow: 4px 6px 7px cyan;
+	margin-block-start: 30px;
+	text-align: center;
+	color: yellow;
+	text-transform: capitalize;
+        }
+   
+  
+        
+       #class img{
+       box-shadow: 4px 3px 3px silver;
+           width: 30%;
+           height: 40%;
+           border-radius: 0px;
+           margin-left: 30px;
+     
+       }
+       footer{
+        background: grey;
+         padding: 10px;
+         color: white;
+         font-weight: 500;
+      
+       }
+       footer i{
+       display: block;
+       
+       
+       
+       color: blue;
+       
+         background: white;padding: 3px;
+         border-radius: 6px
+       }
+       footer ul li{
+         list-style-type: none;
+        line-height: 2.8;
+        text-transform: capitalize;
+        
+    
+       }
+       footer h3{
+         text-transform: uppercase;
+         
+         text-decoration: underline
+       }
+       hr{
+           height: 4px;
+           
+       }
+       #premiumk{
+      
+       padding-block-end: 40px;
+       margin-block-start: 30px;
+       margin-block-end: 30px;
+       
+       }
+       h4{
+         text-decoration: underline;
+         text-transform: uppercase;
+         color: white ;
+       }
+     
+      h1{
+         display: block ;
+       }
+       h3:target{
+         color: yellow;
+       }
+       
+       
+    </style>
+ 
+</head>
+<body>
+    <header>
+       <h1>Macro<img src="ei_1690101045953-removebg-preview-1.png" 
+ > Bookstore</h1>
+ 
+        <div name="menu" class="search">
+          <a href="#navigation"><i class="fas fa-bars" style="color: blue; margin-inline: 30px;"></i></a>
+                    <span><input placeholder="enter your search here" type="search">
+        <button><i></i>search</button</span>
+  </header>
+        
+    <nav id="navigation">
+     <button><a href="#" id="menu"><i class="fa
+     fa-times"></i>close</a></button>
+     
+      <br><br>
+        <ul><li><a href="Macro bookstore.html">home</a></li><li><details><summary>categories</summary>
+                 <ul>
+              <li><a href="#adventure">adventure </a></li>
+              <li><a href="#anime">anime</a></li>
+              <li><a href="#fiction">fiction</a></li>
+              <li><a href="#non-fiction">non-fiction</a></li>
+              <li><a href="#novel">novel</a></li>
+              <li><a href="#romance">romance</a></li>
+            </ul></details></li>
+            <li><a
+        href="#class">new release</a></li><li><a href="Registration.html">join us today</a></li><li><a
+        href="">contact</a></li><li><a href="">about</a></li><li><a href="Log in.html">sign
+        in</a></li></ul>
+        
+    </nav><main>
+    	<h3 align="center" >new release</h3><br>
+
+     <div id="class">
+
+  
+            <img src="468.jpg" alt="img1">
+            <img src="81WduXjuKwL._AC_UF1000,1000_QL80_FMwebp_.jpg" alt="img2">
+            <img src="81Rygqr09ZL._AC_UF1000,1000_QL80_FMwebp_.jpg" alt="img3">
+            <img src="bone.jpg" alt="img4">
+            <img src="2212.jpg" alt="img5">
+            <img src="5-40.jpg" alt="">
+            <img src="461.jpg" alt="">
+            <img src="6-36.jpg" alt="">
+            <img src="focus.jpg" alt="">
+            <img src="590.jpg"  alt=""></div>
+     
+     
+ 
+   <div id="premiumk"> 
+<h3 id="adventure">genre: adventure</h3>
+<section class="Genre-adventure">
+        
+          <div>
+            <figure><img src="61KI7oL-u9L._AC_UF1000,1000_QL80_FMwebp_.jpg" alt="spare
+            image">
+            <figcaption>
+             <a href=""><button>DOWNLOAD</button></a><a
+           href="#detail1"><button>About book</button></a></figcaption></figure>
+             </figure>
+              <div id="detail1">
+                <a href="#">
+              <i class="fa-solid fa-times"></i></a>
+            <article><h3>title</h3>
+              <p>the woman in me</p>
+          
+              <h3>author</h3>
+              <img src="/th.jpeg">
+              
+              <p>Britney Spears</p>
+              
+     
+            <h3>storyline </h3>
+            
+         <p>
+               The Woman in Me is a brave and astonishingly moving story about
+               freedom, fame, motherhood, survival, faith, and
+               hope.
+               </p></article></div></div>
+            
+           <div>
+            <figure><img src="non-fic2.jpg" alt="">
+            <figcaption><a href=""><button>DOWNLOAD 
+            </button></a><a href="#detail2"><button>About book</button></a></figcaption></figure>
+              <div id="detail2">
+                <a href="#">
+              <i class="fa-solid fa-times"></i></a>
+            <article>
+              <h3>title</h3>
+              <p class="title">finding me</p>
+              <h3>author</h3>
+              <img src="/th.jpeg">
+              <p class="author">Viola Davis</p>
+             
+            
+            <h3>storyline </h3>
+            
+         <p>
+                In my book, you will meet a little girl named Viola who ran from
+                her past until she made a life changing decision to stop running
+                forever.</p></article></div></div>
+            
+            <div>
+           <figure><img src="81q61QPJpSL._AC_UF1000,1000_QL80_FMwebp_.jpg" alt=""><figcaption><button>DOWNLOAD 
+            </button><button><a href="#detail3">About book</a></button></figcaption></figure>
+                            <div id="detail3">
+            <a href="#">  <i class="fa-solid fa-times"></i></a>
+            <article>  <h3>title</h3>
+              <p>the collector</p>
+              <h3>author</h3>
+              <img src="/th.jpeg">
+              
+              <p>Daniel silva</p>
+              
+            
+         <p>
+                 Legendary art restorer and spy Gabriel Allon joins forces with
+                 a brilliant and beautiful master-thief to track down the
+                 world’s most valuable missing painting but soon finds himself
+                 in a desperate race to prevent an unthinkable conflict between
+                 Russia and the West. </p></article></div></div>
+                <div>
+           <figure><img src="81fup1LanbL._AC_UF1000,1000_QL80_FMwebp_.jpg"
+           alt="like a river image"><figcaption>
+             <a href=""><button>DOWNLOAD</button></a><a
+           href="#detail4"><button>About book</button></a></figcaption></figure>
+             
+             <div id="detail4">
+             <a href="#"> <i class="fa-solid fa-times"></i></a>
+              <article><h3>title</h3>
+              <p>like a River</p>
+              <h3>author</h3>
+              <img src="/th.jpeg">
+              
+              <p>Granger Smith</p>
+             
+            <h3>storyline </h3>
+            
+         <p>
+           
+             Like a River, a triumphant story of new life birthed out of
+             tragedy, will teach readers how to face their failures, confront
+             their pain, and connect with God—the true source of life.
+           </p>  </article>
+ </div></div> <div>
+         <figure><img src="41ZLnc34EiL._AC_UF1000,1000_QL80_FMwebp_.jpg" alt="verity_image"><figcaption>
+             <a href=""><button>DOWNLOAD</button></a><a
+           href="#detail5"><button>About book</button></a></figcaption></figure>
+             </figure>
+                            <div id="detail5">
+             <a href="#"><i class="fa-solid fa-times"></i></a>
+             <article><h3>title</h3>
+              <p>verity</p>
+              <h3>author</h3>
+              <img src="/th.jpeg">
+              
+              <p>colleen hoover</p>
+            
+            <h3>storyline </h3>
+            
+         <p>
+	Whose truth is the lie? Stay up all night reading the sensational psychological thriller that has readers obsessed
+                </article></div></div>
+           <div><figure><img src="91BbLCJOruL._AC_UF1000,1000_QL80_FMwebp_.jpg" alt=""><figcaption>
+             <a href=""><button>DOWNLOAD</button></a><a
+           href="#detail6"><button>About book</button></a></figcaption></figure>
+             </figure>
+                       <div id="detail6">
+                         <a href="#">
+              <i class="fa-solid fa-times"></i></a>
+            <article>  <h3>title</h3>
+              <p>the silent patient</p>
+              <h3>author</h3>
+              <img src="/th.jpeg">
+              
+              <p>Alex Michaelides</p>
+           
+            <h3>storyline </h3>
+            
+         <p>
+"An unforgettable―and Hollywood-bound―new thriller... A mix of Hitchcockian suspense, Agatha Christie plotting, and Greek tragedy."
+                </p></article><  </div></div>
+                <div><a href="" style="font-size: 6vw; text-decoration: none;text-transform: uppercase">more</a></div>
+        </section>
+        <h3 id="romance">genre: romance </h3>
+        <section class="Genre-romance">
+          <div>
+            <figure><img src="rom1.jpg" alt="spare
+            image">
+            <figcaption>
+             <a href=""><button>DOWNLOAD</button></a><a
+           href="#rom1"><button>About book</button></a></figcaption></figure>
+             </figure>
+              <div id="rom1">
+                <a href="#">
+              
+              <i class="fa-solid fa-times"></i></a>
+            <article><h3>title</h3>
+              <p>queen Charlotte</p>
+          
+              <h3>author</h3>
+              <img src="/th.jpeg">
+              
+     
+              <p>julia Quinn & shonda Rhimes
+     </p>
+              
+     
+     
+            <h3>storyline </h3>
+            
+         <p>
+        Go beyond the original Shondaland series on Netflix, Queen Charlotte,
+        with this lushly romantic Bridgerton prequel novel written by New York
+        Times bestselling authors Julia Quinn and Shonda Rhimes as the marriage
+        of Queen Charlotte and King George of England leads to 
+   an unexpected
+        love story and a union that transforms society
+       
+        
+        </p></article></div></div>
+            
+           <div>
+            <figure><img src="rom2.jpg" alt="image 4">
+            <figcaption><a href=""><button>DOWNLOAD 
+            </button></a><a href="#rom2"><button>About book</button></a></figcaption></figure>
+              <div id="rom2">
+                <a href="#">
+              <i class="fa-solid fa-times"></i></a>
+            <article>
+              <h3> title</h3>
+              <p class="title">a long time coming</p>
+              <h3>author</h3>
+              <img src="/th.jpeg">
+              
+              <p class="author">Meghan Quinn</p>
+            
+            <h3>storyline </h3>
+            
+         <p>From USA Today and Amazon Charts bestselling author Meghan Quinn, comes a witty take on a romantic comedy classic, My Best Friend's Wedding. Steamy, laugh-out-loud, and full of charm, these two best friends heat up the pages while proving true love might be right in front of you.
+
+                </p></article></div></div>
+            
+            <div>
+           <figure><img src="rom3.jpg" alt=""><figcaption><button>DOWNLOAD 
+            </button><button><a href="#rom3">About book</a></button></figcaption></figure>
+                            <div id="rom3">
+            <a href="#">  <i class="fa-solid fa-times"></i></a>
+            <article>  <h3>title</h3>
+              <p>take the lead</p>
+              <h3>author</h3>
+              <img src="/th.jpeg">
+              
+              <p>Alexis daria</p>
+              
+            
+         <p>
+                 From Alexis Daria, author of the critically acclaimed,
+                 international bestseller You Had Me at Hola, comes a fun, sexy
+                 romance set against a reality dance show.
+                 </p></article></div></div>
+                <div>
+           <figure><img src="rom4.jpg"
+           alt="like a river image"><figcaption>
+             <a href=""><button>DOWNLOAD</button></a><a
+           href="#rom4"><button>About book</button></a></figcaption></figure>
+             
+             <div id="rom4">
+             <a href="#"> <i class="fa-solid fa-times"></i></a>
+              <article><h3>title</h3>
+              <p>the reunion</p>
+              <h3>author</h3>
+              <img src="/th.jpeg">
+              
+              <p>kayla olson</p>
+             
+            <h3>storyline </h3>
+            
+         <p>
+When two former teen stars reconnect at the reunion for their hit TV show, they discover their feelings for one another were not merely scripted in this charming and heartwarming novel perfect for fans of Christina Lauren and Sally Thorne..</article>
+ </div></div> <div>
+         <figure><img src="rom5.jpg" alt="verity_image"><figcaption>
+             <a href=""><button>DOWNLOAD</button></a><a
+           href="#rom5"><button>About book</button></a></figcaption></figure>
+             </figure>
+                            <div id="rom5">
+             <a href="#"><i class="fa-solid fa-times"></i></a>
+             <article><h3>title</h3>
+              <p>the secret lives of country gentlemen</p>
+              <h3>author</h3>
+              <img src="/th.jpeg">
+              
+              <p>kj Charles</p>
+            
+            <h3>storyline </h3>
+            
+         <p>
+Gothic scandal meets Bridgerton intrigue in this swashbuckling Regency romance
+from celebrated author KJ Charles.</p>
+                </article></div></div>
+           <div><figure><img src="rom6.jpg" alt=""><figcaption>
+             <a href=""><button>DOWNLOAD</button></a><a
+           href="#rom6"><button>About book</button></a></figcaption></figure>
+             </figure>
+                       <div id="rom6">
+                         <a href="#">
+              <i class="fa-solid fa-times"></i></a>
+            <article>  <h3>title</h3>
+              <p>radiant sin</p>
+              <h3>author</h3>
+              <img src="/th.jpeg">
+              
+              <p>katee Robert</p>
+           
+            <h3>storyline </h3>
+            
+         <p>
+               There's nowhere more dangerous than Olympus...and no one more
+               captivating than its golden god: Apollo. Keeper of secrets,
+               master of his shining realm...and the only man I am powerless to
+               deny.</p></article><  </div></div>
+                  <div><a href="" style="font-size: 6vw; text-decoration: none;text-transform: uppercase">more</a></div>
+        </section>
+        <h3 id="anime">genre: anime</h3>
+        <section id="Genre-anime">
+          <div>
+            <figure><img src="12.jpg" alt="spare
+            image">
+            <figcaption>
+             <a href=""><button>DOWNLOAD</button></a><a
+           href="#detail1"><button>About book</button></a></figcaption></figure>
+             </figure>
+              <div id="detail1">
+                <a href="#">
+              <i class="fa-solid fa-times"></i></a>
+            <article><h3>title</h3>
+              <p>spare</p>
+          
+              <h3>author</h3>
+              <img src="/th.jpeg">
+              
+              <p>prince Harry</p>
+              
+     
+            <h3>storyline </h3>
+            
+         <p>
+                the sons of a great princess 
+                diana, the lives of her sons after her
+                death</></article></div></div>
+            
+           <div>
+            <figure><img src="11-1.jpg" alt="">
+            <figcaption><a href=""><button>DOWNLOAD 
+            </button></a><a href="#detail2"><button>About book</button></a></figcaption></figure>
+              <div id="detail2">
+                <a href="#">
+              <i class="fa-solid fa-times"></i></a>
+            <article>
+              <h3>title</h3>
+              <p class="title">spare</p>
+              <h3>author</h3>
+              <img src="/th.jpeg">
+              
+              <p class="author">prince Harry</p>
+            
+            <h3>storyline </h3>
+            
+         <p>
+                the sons of a great princess 
+                diana, the lives of her sons after her
+                death</></article></div></div>
+            
+            <div>
+           <figure><img src="7-32.jpg" alt=""><figcaption><button>DOWNLOAD 
+            </button><button><a href="#detail3">About book</a></button></figcaption></figure>
+                            <div id="detail3">
+            <a href="#">  <i class="fa-solid fa-times"></i></a>
+            <article>  <h3>title</h3>
+              <p>spare</p>
+              <h3>author</h3>
+              <img src="/th.jpeg">
+              
+              <p>prince Harry</p>
+              
+            
+         <p>
+                 the sons of a great princess 
+                diana, the lives of her sons after her
+                death</article></div></div>
+                <div>
+           <figure><img src="2-48.jpg"
+           alt="like a river image"><figcaption>
+             <a href=""><button>DOWNLOAD</button></a><a
+           href="#detail4"><button>About book</button></a></figcaption></figure>
+             
+             <div id="detail4">
+             <a href="#"> <i class="fa-solid fa-times"></i></a>
+              <article><h3>title</h3>
+              <p>spare</p>
+              <h3>author</h3>
+              <img src="/th.jpeg">
+              
+              <p>prince Harry</p>
+             
+            <h3>storyline </h3>
+            
+         <p>
+           
+             Like a River, a triumphant story of new life birthed out of tragedy, will teach readers how to face their failures, confront their pain, and connect with God—the true source of life.</article>
+ </div></div> <div>
+         <figure><img src="8-28.jpg" alt="verity_image"><figcaption>
+             <a href=""><button>DOWNLOAD</button></a><a
+           href="#detail5"><button>About book</button></a></figcaption></figure>
+             </figure>
+                            <div id="detail5">
+             <a href="#"><i class="fa-solid fa-times"></i></a>
+             <article><h3>title</h3>
+              <p>spare</p>
+              <h3>author</h3>
+              <img src="/th.jpeg">
+              
+              <p>prince Harry</p>
+            
+            <h3>storyline </h3>
+            
+         <p>
+	Whose truth is the lie? Stay up all night reading the sensational psychological thriller that has readers obsessed
+                </article></div></div>
+           <div><figure><img src="9-27.jpg" alt=""><figcaption>
+             <a href=""><button>DOWNLOAD</button></a><a
+           href="#detail6"><button>About book</button></a></figcaption></figure>
+             </figure>
+                       <div id="detail6">
+                         <a href="#">
+              <i class="fa-solid fa-times"></i></a>
+            <article>  <h3>title</h3>
+              <p>spare</p>
+              <h3>author</h3>
+              <img src="/th.jpeg">
+              
+              <p>prince Harry</p>
+           
+            <h3>storyline </h3>
+            
+         <p>
+                the sons of a great princess 
+                diana, the lives of her sons after her
+                death</></article><  </div></div>
+                   <div><a href="" style="font-size: 6vw; text-decoration: none;text-transform: uppercase">more</a></div>
+        </section>
+        </div>
+     
+        
+
+     
+     
+    </main>
+    <br>
+    
+   
+    <footer>
+       <article class="about">
+          <dl>
+          <dt>about us</dt>
+          <dd>we offered access to books lover all over the world, we also
+          include  membership online,Macro bookstore has also a physical store where you can purchase premium
+          books.
+          categories of books are available for reading and purchasing, all your
+          favorite categories are included</dd>
+          </dl>
+       
+           <p><mark>note:</mark> only registered member can access premium book and they are on the platform for a short period of time and attract an extra fee both in the store and on the platform </p>
+        </article>  
+        <h3>contact us here for enquiry or information </h3>
+        <br>
+        <ul>
+          <li><i class="fab fa-facebook"></i>Macro bookstore</li>
+          <li><i class="fab fa-instagram" style="color: pink;"></i>  Macro bookstore</li>
+          <li> <i class="fab fa-whatsapp" style="color: green"></i>  3480743166</li>
+          <li><i class="fab fa-telegram"></i>   590053211</li>
+          <li><i class="fab fa-google"></i>     <a href="mailto:
+          Macro bookstore@gmail.com">Macro bookstore</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <link rel="stylesheet" href="<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+   <title>registration </title>
+   <style>
+   *{
+     padding: 0px;
+     box-sizing: border-box;
+     margin: 0px;
+     
+   }
+  
+     body{
+       background-image: url('istockphoto-1385164997-612x612.jpg');
+      
+       background-size: cover;
+       background-attachment: fixed;
+       background-repeat: no-repeat;
+       position: relative;
+   
+     
+     }
+          nav{
+        display: none;
+            position: absolute;
+            width: 40%;
+            height: 100%;
+            top: 0px;
+            object-fit: cover;
+            background: aqua;
+            z-index: 1;
+           padding-block-end: 20px;
+            transition-duration: 3s;
+            list-style-type: none
+      
+           
+    
+        }
+        nav ul li{
+           line-height: 3.9;
+           list-style-type: none
+            
+        }
+        nav i{
+	text-align: center;
+	font-weight: 900;
+	font-size: 5vw;
+	color: black;
+	height: 80%;
+        }
+        nav a{
+	font-size: 3vw;
+        }
+        nav ul li a{
+            display: block;
+            
+            text-align: center;
+            text-decoration: none;
+            text-transform: capitalize
+        }
+        nav button{
+	padding: 6px;
+	color: blue;
+	float: right;
+	border: none;
+	
+	
+	
+	text-transform: uppercase;
+        }
+        nav a:hover{
+        	background: yellow;
+        }
+        nav:target{
+            display: block;
+          
+        }
+        
+        div{
+          background: #4752c174;
+          
+          
+opacity: 1;
+          margin: 6% auto;
+          padding: 20px;
+          padding: 20px;
+          display: block;
+          border-radius: 20px;
+          width: 60%;
+       
+        }
+        p{
+          color: white;
+          font-weight: 500;
+          font-size: 2vw;
+        }
+        div p{
+          text-transform: capitalize;
+          color: white;
+          font-size: 2.5vw
+       
+        ;
+          
+          
+          
+        }
+        form{
+          padding-inline-start:4vw;
+        }
+        div label{
+          line-height: 3.1;
+       display: block;
+       font-size: 2vw;
+          text-transform: capitalize;
+          color: yellow;
+          font-weight: 500;
+        }
+        div input{
+          margin-inline-start: 0px;
+       width: 90%;
+       color: blue;
+       outline: none;
+       border-radius: 5px;
+       border: none;
+       border-bottom: 3px solid black;
+          padding: 10px;
+          font-size: 2.1vw;
+        }
+        input[type="submit"]{
+          display: block;
+          margin: 0 auto;
+          width: 50%;
+        }
+        input[type="radio"]{
+     
+        width: 3vw;
+      
+        }
+        h2{
+          text-transform: capitalize;
+          font-size: 3.5vw;
+          
+          color: white;
+          text-align: center;
+        }
+        button{
+          padding: 10px;
+          text-transform: capitalize;
+          color: blue;
+          font-size: 1.2vh;
+        }
+        .menu-bar{
+        
+          padding-inline-start: 10px;
+        }
+        header h1 span{
+          display: inline-block;
+        
+          text-transform: uppercase;
+          margin: 0 auto;
+          font-size: 5vw;
+          color: yellow;
+          text-shadow: 1px 3px 2px black;
+        }
+   </style>
+ </head>
+ <body>
+        
+    <nav id="navigation">
+     <button><a href="#" id="menu" align="center"><i class="fa
+     fa-times"></i></a></button>
+     
+      <br><br>
+        <ul><li><a href="Macro bookstore.html">home</a></li><li><a
+        href="">category</a></li><li><a href="">latest</a></li><li><a
+        href="Registration.html">join membership</a></li><li><a href="">contact</a></li><li><a
+        href="">about</a></li><li><a href="/log in.html">sign in</a></li></ul>
+      
+    </nav>
+    
+      <header>
+     <h1>
+          <a href="#navigation" class="menu-bar"><i class="fas fa-bars"
+          style="font-size: 7vw; color: blue; margin-inline: 30px;"></i></a>
+          <span>reader access</span></h1>
+     </header>
+    <main>
+      
+      <div>
+     <h2>registration form</h2><br>
+        <p> please fill out the form accurately</p>
+        <form>
+        
+          
+          
+          <label>
+            first name  </label><input type="text" placeholder="enter first name"/></label>
+          <label>surname</label><input type="text" placeholder="Surname"></label>
+          <label>username</label><input type="text" placeholder="User-name"></label>
+          <label>phone number </label><input type="tel" placeholder="Phone Number"></label>
+          <label>email address </label><input type="email" placeholder="email address"/>
+          <label>sex: <input type="radio" name="sex"/> male 
+          <input type="radio" name="sex"/> female </label>
+          <br><br><input type="submit">
+          
+          
+          
+          
+          
+        </form><br>
+     
+        <p>already have an account <a href="log in.html"><button>log in</button></a>
+    <a href="">forget password</a></p>
+      </div>
+      
+    </main>
+    <br>
+ </body>
+</html>
+
+
+
+
